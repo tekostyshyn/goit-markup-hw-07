@@ -1,0 +1,38 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $bgdColorAccent;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__box {
+  flex-grow: 1;
+}
+
+/* footer logo */
+.footer__logo {
+  color: $primaryWhiteColor;
+}
+
+/* footer socials */
+
+.socials-box {
+  margin-left: 70px;
+}
+
+.socials-box__subtitle {
+  color: $primaryWhiteColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer__socials {
+  margin-top: 20px;
+}

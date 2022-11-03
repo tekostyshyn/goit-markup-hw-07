@@ -1,0 +1,39 @@
+.works {
+  padding-top: 0;
+  text-align: center;
+}
+
+.works__list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.works__item {
+  position: relative;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.works__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 100%;
+}
+
+.works__title {
+  color: $primaryWhiteColor;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
