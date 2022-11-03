@@ -55,11 +55,20 @@ button {
   padding-bottom: 94px;
 }
 
-.section {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+.button {
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+  border-radius: 4px;
 }
 
 .visually-hidden {
@@ -95,7 +104,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
-.header .container {
+.header__container {
   display: flex;
   align-items: center;
 }
@@ -150,10 +159,7 @@ img {
 }
 
 .site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--accent-color);
-}
-
+.site-nav__link:focus,
 .site-nav__link--current {
   color: var(--accent-color);
 }
@@ -172,14 +178,14 @@ img {
 
 /* contacts header */
 
-.contacts__icon {
-  fill: currentColor;
-  margin-right: 10px;
-}
-
 .contacts {
   display: flex;
   margin-left: auto;
+}
+
+.contacts__icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .contacts__item {
@@ -239,15 +245,6 @@ img {
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
-}
-
-.button {
-  font-weight: 700;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
-  border-radius: 4px;
 }
 
 .hero__button {
@@ -750,11 +747,11 @@ address {
 
 /* footer socials */
 
-.socials-wrapper {
+.socials-box {
   margin-left: 70px;
 }
 
-.socials-wrapper__subtitle {
+.socials-box__subtitle {
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 14px;
@@ -846,21 +843,20 @@ address {
   justify-content: center;
 }
 
-.filter-item {
+.filter__item {
   margin-right: 8px;
 }
 
-.filter-item:last-child {
+.filter__item:last-child {
   margin-right: 0;
 }
 
-.portfolio-button {
+.filter__button {
   padding: 6px 22px;
 
   color: var(--primary-color);
   background-color: var(--bgd-color-section);
 
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -873,19 +869,19 @@ address {
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-button:first-child {
+.filter__button:first-child {
   padding: 6px 25px;
 }
 
-.portfolio-button:hover,
-.portfolio-button:focus {
+.filter__button:hover,
+.filter__button:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
-.card-set {
+.portfolio__cards {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -893,7 +889,7 @@ address {
   margin-bottom: -30px;
 }
 
-.portfolio-card {
+.card {
   flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-bottom: 30px;
@@ -901,48 +897,24 @@ address {
   background-color: var(--primary-white-color);
 }
 
-.portfolio-container {
-  padding: 20px 24px;
-  border-left: solid 1px #eeeeee;
-  border-right: solid 1px #eeeeee;
-  border-bottom: solid 1px #eeeeee;
-}
-
-.portfolio-card .link {
+.card__link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card .link:hover,
-.portfolio-card .link:focus {
+.card__link:hover,
+.card__link:focus {
   display: block;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
+  0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-subtitle {
-  color: var(--primary-color);
-
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.portfolio-description {
-  margin-top: 4px;
-
-  color: var(--secondary-color);
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-}
-
-.thumb {
+.card__wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio-thumb {
+
+.card__popup {
   display: flex;
   align-items: center;
 
@@ -963,7 +935,30 @@ address {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card .link:hover .portfolio-thumb,
-.portfolio-card .link:focus .portfolio-thumb {
+.card__link:hover .card__popup,
+.card__link:focus .card__popup {
   transform: translateY(-100%);
 }
+
+.card__thumb {
+  padding: 20px 24px;
+  border-left: solid 1px #eeeeee;
+  border-right: solid 1px #eeeeee;
+  border-bottom: solid 1px #eeeeee;
+}
+
+.card__subtitle {
+  color: var(--primary-color);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card__description {
+  margin-top: 4px;
+
+  color: var(--secondary-color);
+  line-height: 1.88;
+  letter-spacing: 0.03em;
