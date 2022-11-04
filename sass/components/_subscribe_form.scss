@@ -31,7 +31,7 @@
   letter-spacing: 0.03em;
   color: $subscribeTextColor;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px $boxShadowMain;
   outline: 0;
 }
 
@@ -48,7 +48,7 @@
   fill: $primaryWhiteColor;
   border: 0;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px $boxShadowMain;
 
   &:hover,
   &:focus {

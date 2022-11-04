@@ -18,8 +18,7 @@
 
   fill: $iconPrimaryColor;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms $cubic, fill 250ms $cubic;
 
   &:hover,
   &:focus {
@@ -32,7 +31,7 @@
   fill: $primaryWhiteColor;
   background-color: $iconBackgroundColor;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms $cubic;
 }
 
 .socials__icon {
