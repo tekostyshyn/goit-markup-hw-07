@@ -1,15 +1,11 @@
 .clients {
-  text-align: center;
-}
-
-.clients__list {
   @include centeredFlex;
   margin-top: 50px;
   gap: 30px;
 }
 
 .clients__item {
-  width: 170px;
+  width: calc((100% - 150px) / 5);
   height: 92px;
 }
 
