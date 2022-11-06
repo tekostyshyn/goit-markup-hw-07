@@ -3,8 +3,7 @@
 }
 
 .header__container {
-  display: flex;
-  align-items: center;
+  @include centeredFlex;
 }
 
 .header__logo {
@@ -86,9 +85,7 @@
 }
 
 .contacts__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex;
   padding-top: 32px;
   padding-bottom: 32px;
 

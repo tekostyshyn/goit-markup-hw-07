@@ -1,6 +1,5 @@
 .filter {
-  display: flex;
-  justify-content: center;
+  @include centeredFlex;
 }
 
 .filter__item {

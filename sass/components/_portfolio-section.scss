@@ -30,8 +30,7 @@
 }
 
 .card__popup {
-  display: flex;
-  align-items: center;
+  @include centeredFlex;
 
   position: absolute;
   bottom: -100%;

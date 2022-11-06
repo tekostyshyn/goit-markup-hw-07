@@ -95,9 +95,7 @@
 }
 
 .terms__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include centeredFlex;
   gap: 8px;
 
   font-size: 14px;

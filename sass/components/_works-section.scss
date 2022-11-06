@@ -18,9 +18,7 @@
 }
 
 .works__box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
   position: absolute;
   bottom: 0;
   background-color: $worksBoxBackground;
